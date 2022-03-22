@@ -15,7 +15,7 @@ app.component('dynamicComponent', {
 			type: String,
 			required: true,
 			validator: val => {
-				var isValid = app.component(val);
+				var isValid = app.component(_.camelCase(val));
 				if (!isValid) console.error('Dynamic component', val, 'is not available via app.component()');
 				return isValid;
 			},
@@ -24,7 +24,8 @@ app.component('dynamicComponent', {
 		events: {type: Object},
 	},
 	render: function(h) {
-		return h(this.$props.component, {
+		console.log('USE', _.camelCase(this.$props.component));
+		return h(_.camelCase(this.$props.component), {
 			ref: 'component',
 			props: this.props,
 			on: this.events,

@@ -24,7 +24,6 @@ app.component('dynamicComponent', {
 		events: {type: Object},
 	},
 	render: function(h) {
-		console.log('USE', _.camelCase(this.$props.component));
 		return h(_.camelCase(this.$props.component), {
 			ref: 'component',
 			props: this.props,

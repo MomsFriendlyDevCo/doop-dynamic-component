@@ -1,6 +1,6 @@
 {
   "name": "@doop/dynamic-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A dynamic component service for the Doop framework",
   "repository": {
     "type": "git",

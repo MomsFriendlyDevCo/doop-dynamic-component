@@ -20,6 +20,7 @@ app.component('dynamicComponent', {
 				return isValid;
 			},
 		},
+		attrs: {type: Object},
 		props: {type: Object},
 		events: {type: Object},
 	},
